@@ -61,28 +61,37 @@ axios.request(options).then(function (response) {
     
     async checkBlock() {
         var transactionarray = []
-        let block = await this.web3.eth.getBlock('latest');
-        let number = block.number;
-        let transactions = block.transactions;
+        let x = await this.web3.eth.getBlock('latest');
+        let number = x.number;
+     
         //console.log('Search Block: ' + transactions);
-    
-        if (block != null && block.transactions != null) {
-            for (let txHash of block.transactions) {
-                let tx = await this.web3.eth.getTransaction(txHash);
-                if (this.address == tx.to.toLowerCase()) {
-                    transactionarray.push({sender:tx.from, receiver:tx.to, amount:Web3.utils.fromWei(tx.value, "ether")});
+        for (let i = number; i>=0;i--) {
+            let block = await this.web3.eth.getBlock(i)
+            if (block != null && block.transactions != null) {
+                for (let txHash of block.transactions) {
+                    let tx = await this.web3.eth.getTransaction(txHash);
+                    console.log("looping")
+                    if (this.address == tx.to.toLowerCase() || this.address == tx.from.toLowerCase()) {
+                        console.log({sender:tx.from, receiver:tx.to, amount:Web3.utils.fromWei(tx.value, "ether")})
+                        transactionarray.push({sender:tx.from, receiver:tx.to, amount:Web3.utils.fromWei(tx.value, "ether")});
+                    }
                 }
-            }
+        }
 
+
+
+
+            
+            console.log(transactionarray)
             var transactionString = ""
-            for (var i = 0; i<transactionarray.length;i++){
+            for (let i = 0; i<transactionarray.length;i++){
                 if (transactionarray[i].sender == response.data.publicKey){
                     transactionarray[i].sender = "You"
                 } else if (transactionarray[i].receiver == response.data.publicKey) {
                     transactionarray[i].receiver = "You"
                 }
 
-                transactionString+= "Sender: " + transactionarray[i].sender + "\n" + "Receiver: " + transactionarray[i].receiver +   "\n" + "Amount: " +transactionarray[i].amount + " ether"
+                transactionString+= ("Sender: " + transactionarray[i].sender + "\n" + "Receiver: " + transactionarray[i].receiver +   "\n" + "Amount: " +transactionarray[i].amount + " ether")
                 transactionString+="\n\n\n\n"
             }
             

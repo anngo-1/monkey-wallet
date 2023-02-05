@@ -15,22 +15,8 @@ walletbutton.onclick = function(){
 
 lgb = document.getElementById("lgb")
 
-const logout = async () => {
-    try {
-      console.log("Logging out");
-      await auth0Client.logout({
-        logoutParams: {
-          returnTo: window.location.origin
-        }
-      });
-    } catch (err) {
-      console.log("Log out failed", err);
-    }
-  };
-  
 lgb.onclick = function(){
-//   window.location.replace("https://monkeywallet.web.app/index.html");
-    logout()
+  window.location.replace("https://monkeywallet.web.app/index.html");
 }
 
 addw = document.getElementById("addw")
@@ -106,32 +92,50 @@ class TransactionChecker {
 }
 
 async checkBlock() {
+   
     var transactionarray = []
-    let block = await this.web3.eth.getBlock('latest');
-    let number = block.number;
-    let transactions = block.transactions;
+    let x = await this.web3.eth.getBlock('latest');
+    let number = x.number;
+ 
     //console.log('Search Block: ' + transactions);
-
-    if (block != null && block.transactions != null) {
-        for (let txHash of block.transactions) {
-            let tx = await this.web3.eth.getTransaction(txHash);
-            if (this.address == tx.to.toLowerCase()) {
-                transactionarray.push({sender:tx.from.toLowerCase(), receiver:tx.to.toLowerCase(), amount:Web3.utils.fromWei(tx.value, "ether")})
-                
+    for (let i = number; i>=0;i--) {
+        let block = await this.web3.eth.getBlock(i)
+        if (block != null && block.transactions != null) {
+            for (let txHash of block.transactions) {
+                let tx = await this.web3.eth.getTransaction(txHash);
+                console.log("looping")
+                if (this.address == tx.to.toLowerCase() || this.address == tx.from.toLowerCase()) {
+                    console.log({sender:tx.from, receiver:tx.to, amount:Web3.utils.fromWei(tx.value, "ether")})
+                    transactionarray.push({sender:tx.from, receiver:tx.to, amount:Web3.utils.fromWei(tx.value, "ether")});
+                }
             }
-        }
-        let fullincome = 0
-        for (var i = 0; i<transactionarray.length;i++){
-            fullincome += transactionarray[i].amount
-        }
-        addData(volume, 0, 0)
-        addData(volume, 0, transactionarray.length)
-        addData(income, 0, 0)
-        addData(income, 0, fullincome)
-        addData(newcustomers, 0, 0)
-        addData(newcustomers, 0, 1)
-        sessionStorage.setItem("transactions", transactionarray)
     }
+       
+
+    }
+    let fullincome = 0
+    for (let i = 0; i<transactionarray.length;i++){
+        fullincome += transactionarray[i].amount
+    }
+    addData(volume, 0, 0)
+    addData(volume, 0, 1)
+    addData(volume, 0, 0)
+    addData(volume, 0, 0)
+    addData(volume, 0, transactionarray.length)
+
+
+    addData(income, 0, 0)
+    addData(income, 0, 2)
+    addData(income, 0, 0)
+    addData(income, 0, 0)
+    addData(income, 0, fullincome)
+
+    addData(newcustomers, 0, 0)
+    addData(newcustomers, 0, 0)
+    addData(newcustomers, 0, 0)
+    addData(newcustomers, 0, transactionarray.length)
+  
+    sessionStorage.setItem("transactions", transactionarray)
 }
 }
 
