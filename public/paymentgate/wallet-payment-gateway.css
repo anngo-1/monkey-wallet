@@ -1,0 +1,495 @@
+.wallet-payment-gateway-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.wallet-payment-gateway-how-it-works {
+  width: 100%;
+  height: 2479px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-sevenunits);
+  padding-right: var(--dl-space-space-sevenunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-sixunits);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.wallet-payment-gateway-header {
+  width: 70%;
+  height: 52px;
+  display: flex;
+  max-width: var(--dl-size-size-maxwidth);
+  margin-top: 3%;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-threeunits);
+  border-radius: 150px;
+  margin-bottom: var(--dl-space-space-fiveunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+  background-color: rgba(92, 92, 92, 0.15);
+}
+.wallet-payment-gateway-btn-group {
+  width: 275px;
+  display: flex;
+  align-items: center;
+  margin-right: var(--dl-space-space-fiveunits);
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.wallet-payment-gateway-account {
+  width: 103px;
+  transition: 0.1s;
+  border-width: 0px;
+  border-radius: 20px;
+  background-color: rgb(216, 216, 216);
+}
+.wallet-payment-gateway-account:hover {
+  border-width: 3px;
+}
+.wallet-payment-gateway-account1 {
+  width: 92px;
+  transition: 0.1s;
+  border-width: 0px;
+  border-radius: 20px;
+  background-color: rgb(216, 216, 216);
+}
+.wallet-payment-gateway-account1:hover {
+  border-width: 3px;
+}
+.wallet-payment-gateway-settings {
+  width: 166px;
+  transition: 0.1s;
+  border-width: 0px;
+  border-radius: 20px;
+  background-color: rgb(216, 216, 216);
+}
+.wallet-payment-gateway-settings:hover {
+  border-width: 3px;
+}
+.wallet-payment-gateway-log-out {
+  width: 91px;
+  transition: 0.1s;
+  margin-left: 10%;
+  border-width: 0px;
+  border-radius: 20px;
+  background-color: rgb(216, 216, 216);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.wallet-payment-gateway-log-out:hover {
+  border-width: 3px;
+}
+.wallet-payment-gateway-centered-container {
+  width: 100%;
+  height: 1703px;
+  display: flex;
+  position: relative;
+  max-width: 1200px;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wallet-payment-gateway-heading {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.wallet-payment-gateway-text {
+  color: rgb(0, 0, 0);
+  align-self: flex-start;
+}
+.wallet-payment-gateway-category {
+  color: white;
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+  padding-left: var(--dl-space-space-fourunits);
+  border-radius: 50px;
+  margin-bottom: var(--dl-space-space-threeunits);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-unit);
+  background-color: rgba(49, 119, 115, 0.51);
+}
+.wallet-payment-gateway-headng {
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-threeunits);
+  margin-right: var(--dl-space-space-fourunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-threeunits);
+  justify-content: center;
+}
+.wallet-payment-gateway-text01 {
+  font-size: 80px;
+  align-self: flex-start;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+}
+.wallet-payment-gateway-text02 {
+  font-size: 40px;
+  align-self: flex-start;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.wallet-payment-gateway-get-started {
+  width: auto;
+  height: auto;
+  margin-top: 10%;
+  align-items: center;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+.wallet-payment-gateway-get-started:hover {
+  color: black;
+  background-color: #ffffff;
+}
+.wallet-payment-gateway-text03 {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.wallet-payment-gateway-container1 {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding-top: 57px;
+  padding-right: 53px;
+  flex-direction: column;
+  padding-bottom: 44px;
+}
+.wallet-payment-gateway-container2 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  margin-top: 10%;
+  align-items: flex-start;
+  justify-content: center;
+}
+.wallet-payment-gateway-text04 {
+  color: rgb(255, 255, 255);
+  width: auto;
+  height: auto;
+  font-size: 40px;
+  align-self: flex-end;
+  font-style: normal;
+  margin-top: 0%;
+  text-align: left;
+  font-weight: 700;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 2%;
+}
+.wallet-payment-gateway-text05 {
+  color: #000000;
+}
+.wallet-payment-gateway-text06 {
+  color: #000000;
+}
+.wallet-payment-gateway-text08 {
+  margin: 3%;
+  font-size: 32px;
+  align-self: center;
+  font-style: normal;
+  margin-top: 0%;
+  text-align: left;
+  font-weight: 700;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 0%;
+}
+.wallet-payment-gateway-get-started1 {
+  width: auto;
+  height: auto;
+  align-self: flex-start;
+  margin-top: 10%;
+  align-items: center;
+  margin-left: 9%;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+.wallet-payment-gateway-get-started1:hover {
+  color: black;
+  background-color: #ffffff;
+}
+.wallet-payment-gateway-text14 {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  padding-top: 12px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.wallet-payment-gateway-transactions {
+  width: 100%;
+  height: 1038px;
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.wallet-payment-gateway-gateway-template {
+  gap: var(--dl-space-space-twounits);
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: center;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: 4px;
+  margin-bottom: var(--dl-space-space-twounits);
+  padding-right: 5px;
+  flex-direction: column;
+  padding-bottom: 0px;
+  justify-content: center;
+}
+
+.wallet-payment-gateway-background {
+  flex: 1;
+  align-self: stretch;
+  align-items: flex-start;
+  padding-top: 60px;
+  padding-left: var(--dl-space-space-twounits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-threeunits);
+  background-color: rgba(216, 216, 216, 0.53);
+}
+.wallet-payment-gateway-wallet-name {
+  width: auto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  margin-bottom: var(--dl-space-space-unit);
+}
+.wallet-payment-gateway-wallet-desc {
+  width: auto;
+  line-height: 24px;
+}
+.wallet-payment-gateway-wallet-data {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-self: flex-start;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-twounits);
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 20px;
+  background-color: #6f6f6f;
+}
+
+.wallet-payment-gateway-text15 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  align-self: flex-start;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text16 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  align-self: flex-start;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text17 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text20 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text23 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text26 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text29 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text32 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text35 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text38 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text41 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text44 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.wallet-payment-gateway-text47 {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+@media(max-width: 1600px) {
+  .wallet-payment-gateway-transactions {
+    width: 1154px;
+  }
+  .wallet-payment-gateway-gateway-template {
+    width: 75%;
+  }
+  .wallet-payment-gateway-background {
+    width: 100%;
+  }
+  .wallet-payment-gateway-wallet-data {
+    display: flex;
+  }
+}
+@media(max-width: 1200px) {
+  .wallet-payment-gateway-background {
+    width: 100%;
+  }
+  .wallet-payment-gateway-wallet-desc {
+    width: 35%;
+  }
+}
+@media(max-width: 991px) {
+  .wallet-payment-gateway-category {
+    padding-left: 0px;
+    margin-bottom: var(--dl-space-space-threeunits);
+    flex-direction: column;
+  }
+  .wallet-payment-gateway-headng {
+    margin-left: var(--dl-space-space-fourunits);
+  }
+  .wallet-payment-gateway-transactions {
+    width: 85%;
+  }
+  .wallet-payment-gateway-wallet-desc {
+    line-height: 21px;
+  }
+  .wallet-payment-gateway-wallet-data {
+    width: 30%;
+    height: 50%;
+  }
+}
+@media(max-width: 767px) {
+  .wallet-payment-gateway-how-it-works {
+    padding-top: var(--dl-space-space-fourunits);
+    padding-left: var(--dl-space-space-oneandhalfunits);
+    padding-right: var(--dl-space-space-oneandhalfunits);
+    padding-bottom: var(--dl-space-space-fourunits);
+  }
+  .wallet-payment-gateway-header {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .wallet-payment-gateway-btn-group {
+    display: none;
+  }
+  .wallet-payment-gateway-heading {
+    margin-bottom: var(--dl-space-space-threeunits);
+  }
+  .wallet-payment-gateway-text {
+    margin-bottom: 0px;
+  }
+  .wallet-payment-gateway-headng {
+    padding-bottom: 0px;
+  }
+  .wallet-payment-gateway-get-started {
+    display: none;
+  }
+  .wallet-payment-gateway-get-started1 {
+    display: none;
+  }
+  .wallet-payment-gateway-gateway-template {
+    gap: var(--dl-space-space-oneandhalfunits);
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+  }
+  .wallet-payment-gateway-background {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .wallet-payment-gateway-wallet-name {
+    font-size: 24px;
+  }
+  .wallet-payment-gateway-wallet-desc {
+    font-size: 14px;
+  }
+  .wallet-payment-gateway-wallet-data {
+    width: 25%;
+    margin-right: 150px;
+  }
+}
+@media(max-width: 479px) {
+  .wallet-payment-gateway-header {
+    padding: var(--dl-space-space-unit);
+  }
+  .wallet-payment-gateway-category {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+    flex-direction: column;
+  }
+  .wallet-payment-gateway-gateway-template {
+    gap: var(--dl-space-space-oneandhalfunits);
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+  }
+}
